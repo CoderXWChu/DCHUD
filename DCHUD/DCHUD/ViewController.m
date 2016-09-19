@@ -28,7 +28,7 @@
                               @"5.显示消息3秒后隐藏",
                               @"6.显示消息时可与下层交互",
                               ]];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell1"];
     self.tableView.tableFooterView = [UIView new];
     [self.tableView reloadData];
     
@@ -44,7 +44,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
     cell.textLabel.text = self.datas[indexPath.row];
     return cell;
 }
